@@ -1,0 +1,28 @@
+[project]
+name = "code"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mindspore>=2.9.0",
+    "mypy>=2.1.0",
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.15.14",
+]
+
+[tool.coverage.run]
+source = ["src/"]
+omit = []
+
+[tool.coverage.report]
+exclude_lines = [
+    "if __name__ == .__main__.:",
+    "# pragma: no cover",
+    "print\\(.*\\)",
+    "rel_path.*",
+    "os\\.makedirs.*",
+    "os\\.path\\.join.*",
+    "sys\\.path\\.insert.*",
+]
